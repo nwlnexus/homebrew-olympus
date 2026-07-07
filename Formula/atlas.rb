@@ -1,26 +1,26 @@
 class Atlas < Formula
   desc "Operator CLI/TUI for the Olympus homelab"
   homepage "https://github.com/nwlnexus/olympus-sdk"
-  version "0.14.1"
+  version "0.15.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.14.1/atlas-darwin-aarch64.tar.gz"
-      sha256 "21eb96efbd446522c1f5f80cb23accbc24aefe9fbb7243aec29f5bac86aa9c8a"
+      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.15.0/atlas-darwin-aarch64.tar.gz"
+      sha256 "99f1396af5e6cc10fd76d4dd8185459f94531bd7ee2470b5f35c6d9ee83cd8bc"
     else
-      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.14.1/atlas-darwin-x86_64.tar.gz"
-      sha256 "7181558455958f711acfc297a600de5782018ae7e61b88b54e931499847b6584"
+      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.15.0/atlas-darwin-x86_64.tar.gz"
+      sha256 "f573565355a6b7fd86a293a71dea60c782af5c917c831c582388bf6745879916"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.14.1/atlas-linux-aarch64.tar.gz"
-      sha256 "75d3e40af3664ec2077ed79690dfaf187c5921912c2cb93001af2c83227bc5f5"
+      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.15.0/atlas-linux-aarch64.tar.gz"
+      sha256 "22ba5221b776fe434998109703c176e78f6761bdb15839276a97b4a21954b6b9"
     else
-      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.14.1/atlas-linux-x86_64.tar.gz"
-      sha256 "c678d55a8d852901a921feb2d26a2e0758805a6846348bb089657fb41931e95d"
+      url "https://dl.nwlnexus.net/releases/atlas/atlas-v0.15.0/atlas-linux-x86_64.tar.gz"
+      sha256 "300672e3b1377c4d1e6e3977db142a44ea84ddf49eb666c462ca00a78a7e8173"
     end
   end
 
