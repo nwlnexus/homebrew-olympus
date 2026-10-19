@@ -7,20 +7,20 @@ class Atlas < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://dl.nwlnexus.io/releases/atlas/atlas-v0.27.0/atlas-darwin-aarch64.tar.gz"
-      sha256 "87d45e699467869068ebf2d074cb8f611bac3dbdbc83cabd162971ba23714b92"
+      sha256 "0307675f1931c073b3fe9c4cce11faee947faf44c75fc1edad433e506d1a16bc"
     else
       url "https://dl.nwlnexus.io/releases/atlas/atlas-v0.27.0/atlas-darwin-x86_64.tar.gz"
-      sha256 "08e7b6474eae27e2792c1568719647ef2d821ebd496c2292a2c8b09be3edfa4a"
+      sha256 "eca353946cebfdfc266849d05b708abd5d0bfee175d60d6fc9e0eb41778e4893"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://dl.nwlnexus.io/releases/atlas/atlas-v0.27.0/atlas-linux-aarch64.tar.gz"
-      sha256 "6dc1ebeb9940ef4f0760d2072524c9082717b74c8320a14e31fa4487669a4d29"
+      sha256 "24c1fdaf541af6da7573c943e50bbb0c078db57a97091780891d42e780623392"
     else
       url "https://dl.nwlnexus.io/releases/atlas/atlas-v0.27.0/atlas-linux-x86_64.tar.gz"
-      sha256 "c8180af7301bcd8ec6d4e2d04a52e1a89024465328d01b4f50e7f7c059544376"
+      sha256 "34a6add0d88d2d08e01251066b69c28338da78276d5f6ce9ffa9e2866986a093"
     end
   end
 
