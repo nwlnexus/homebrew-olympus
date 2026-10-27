@@ -40,9 +40,16 @@ jobs:
           brew tap | grep -x 'nwlnexus/olympus'
 
       - name: brew style
-        run: brew style nwlnexus/olympus
+        # Formulae only: brew style would also run actionlint on .github/workflows with its own variable allowlist.
+        run: |
+          set -euo pipefail
+          names=()
+          for f in Formula/*.rb; do names+=("nwlnexus/olympus/$(basename "$f" .rb)"); done
+          brew style "${names[@]}"
 
       # --online is deliberately not used: the formula homepage is the private olympus-sdk repo,
       # which the online check reports as HTTP 404 from an unauthenticated runner.
       - name: brew audit --strict
-        run: brew audit --strict nwlnexus/olympus/atlas
+        run: |
+          set -euo pipefail
+          for f in Formula/*.rb; do brew audit --strict "nwlnexus/olympus/$(basename "$f" .rb)"; done
